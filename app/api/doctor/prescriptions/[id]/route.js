@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import connectDB from "../../../../lib/db/connection";
 import Prescription from "../../../../models/Prescription";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 
 // 📌 GET Prescription by ID
 export async function GET(req, { params }) {
@@ -34,9 +34,9 @@ export async function PATCH(req, { params }) {
       return NextResponse.json({ message: "Unauthorized: No token provided" }, { status: 401 });
     }
 
-    const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const doctorId = decoded.userId; // Ensure only a doctor can update
+    // const token = authHeader.split(" ")[1];
+    // const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    // const doctorId = decoded.userId; // Ensure only a doctor can update
 
     const { id } = params; // Get prescription ID from URL
     const updateData = await req.json();
