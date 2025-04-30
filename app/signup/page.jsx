@@ -124,7 +124,7 @@ export default function SignupForm() {
               <input
                 type="text"
                 name="username"
-                placeholder="John Doe"
+                placeholder="user"
                 className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 value={formData.username}
                 onChange={handleChange}
@@ -160,7 +160,7 @@ export default function SignupForm() {
               <input
                 type="text"
                 name="phone"
-                placeholder="+1 (123) 456-7890"
+                placeholder="+91 8805203789"
                 className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 value={formData.phone}
                 onChange={handleChange}
@@ -182,11 +182,11 @@ export default function SignupForm() {
                   value={formData.role}
                   onChange={handleChange}
                   required
-                >
+                >                 
+                 <option value="receptionist">Receptionist</option>
                   <option value="doctor">Doctor</option>
-                  <option value="receptionist">Receptionist</option>
                   <option value="eyewear_employee">Eyewear Specialist</option>
-                  <option value="patient">Patient</option>
+                  {/* <option value="patient">Patient</option> */}
                 </select>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
