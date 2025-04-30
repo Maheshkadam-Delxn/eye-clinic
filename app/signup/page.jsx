@@ -125,7 +125,7 @@ export default function SignupForm() {
                 type="text"
                 name="username"
                 placeholder="user"
-                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="w-full pl-10 pr-3 py-2 border border-gray-300 text-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 value={formData.username}
                 onChange={handleChange}
                 required
@@ -143,7 +143,7 @@ export default function SignupForm() {
                 type="email"
                 name="email"
                 placeholder="your.email@example.com"
-                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -161,7 +161,7 @@ export default function SignupForm() {
                 type="text"
                 name="phone"
                 placeholder="+91 8805203789"
-                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="w-full pl-10 pr-3 py-2 border text-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 value={formData.phone}
                 onChange={handleChange}
                 required
