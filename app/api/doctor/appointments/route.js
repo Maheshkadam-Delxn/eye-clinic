@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import connectDB from "../../../lib/db/connection";
 import Appointment from "../../../models/Appoinment";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 
 export async function GET(req) {
   try {
@@ -13,9 +13,9 @@ export async function GET(req) {
       return NextResponse.json({ message: "Unauthorized: No token provided" }, { status: 401 });
     }
 
-    const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const doctorId = decoded.userId; // Extract doctorId from token
+    // const token = authHeader.split(" ")[1];
+    // const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    // const doctorId = decoded.userId; // Extract doctorId from token
 
     // Extract query parameters for date & time filtering
     const searchParams = req.nextUrl.searchParams;

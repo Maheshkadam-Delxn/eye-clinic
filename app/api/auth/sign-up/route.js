@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import Doctor from "../../../../app/models/Doctor.js"
+// import Doctor from "../../../../app/models/Doctor.js"
 import { NextResponse } from "next/server";
 import connectDB from "../../../lib/db/connection.js";
 import bcrypt from "bcryptjs";

@@ -20,6 +20,10 @@ export function verifyAuth(req) {
     req.user = decoded;
     return NextResponse.next();
   } catch (error) {
+    if (process.env.NODE_ENV === "development") {
+      console.error("Auth verification error:", error);
+    }
     return NextResponse.json({ message: "Invalid token" }, { status: 403 });
   }
+  
 }

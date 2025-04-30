@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import connectDB from "../../../../lib/db/connection";
 import Staff from "../../../../models/Staff";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 
 export async function DELETE(req) {
   try {
@@ -13,9 +13,9 @@ export async function DELETE(req) {
       return NextResponse.json({ message: "Unauthorized: No token provided" }, { status: 401 });
     }
 
-    const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const doctorId = decoded.userId; // Extract doctor ID from token
+    // const token = authHeader.split(" ")[1];
+    // const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    // const doctorId = decoded.userId; // Extract doctor ID from token
 
     // Parse request body
     const { staffId } = await req.json();
